@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Miguel Araujo — Portfolio & Lab</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;min-height:100vh}
+.hero{background:linear-gradient(135deg,#0d1117 0%,#161b22 50%,#0d1117 100%);padding:60px 20px 40px;text-align:center;border-bottom:1px solid #30363d}
+.hero h1{font-size:2.5rem;background:linear-gradient(90deg,#58a6ff,#8b5cf6,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.hero p{color:#8b949e;font-size:1.1rem;max-width:600px;margin:0 auto 20px;line-height:1.6}
+.hero .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.hero .tag{padding:4px 12px;border-radius:999px;font-size:.8rem;font-weight:600;background:#21262d;color:#58a6ff;border:1px solid #30363d}
+.container{max-width:900px;margin:0 auto;padding:30px 20px}
+.section{margin-bottom:40px}
+.section h2{font-size:1.3rem;color:#f0f6fc;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #21262d}
+.section h2 span{color:#58a6ff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:#58a6ff;transform:translateY(-2px)}
+.card .value{font-size:1.5rem;font-weight:700;color:#f0f6fc}
+.card .label{font-size:.8rem;color:#8b949e;margin-top:4px}
+.card .icon{font-size:1.2rem;margin-bottom:6px}
+.links{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.link-card{display:flex;align-items:center;gap:12px;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px 16px;text-decoration:none;color:#c9d1d9;transition:border-color .2s,transform .2s}
+.link-card:hover{border-color:#58a6ff;transform:translateY(-2px)}
+.link-card .lc-icon{font-size:1.5rem}
+.link-card .lc-info{flex:1}
+.link-card .lc-title{font-weight:600;color:#f0f6fc}
+.link-card .lc-desc{font-size:.78rem;color:#8b949e;margin-top:2px}
+.link-card .lc-arrow{color:#484f58;font-size:1.2rem}
+.timeline{position:relative;padding-left:20px}
+.timeline::before{content:'';position:absolute;left:6px;top:4px;bottom:4px;width:2px;background:#21262d}
+.timeline-item{position:relative;padding:8px 0 8px 16px;font-size:.85rem;line-height:1.5}
+.timeline-item::before{content:'';position:absolute;left:-14px;top:12px;width:10px;height:10px;border-radius:50%;background:#58a6ff;border:2px solid #0d1117}
+.timeline-item .date{color:#484f58;font-size:.75rem}
+.timeline-item .desc{color:#c9d1d9}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-bottom:24px}
+.stat-card{text-align:center;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px}
+.stat-card .num{font-size:1.8rem;font-weight:700;color:#58a6ff}
+.stat-card .label{font-size:.75rem;color:#8b949e;margin-top:4px}
+.footer{text-align:center;padding:30px 20px;color:#484f58;font-size:.85rem;border-top:1px solid #21262d}
+.footer a{color:#58a6ff;text-decoration:none}
+@media(max-width:600px){.hero h1{font-size:1.8rem}.grid{grid-template-columns:1fr 1fr}.links{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>Miguel Araujo</h1>
+  <p>Engenheiro de Software em formação • Infraestrutura Autônoma • IA Generativa • Raspberry Pi • Full-stack</p>
+  <div class="tags">
+    <span class="tag">Python</span>
+    <span class="tag">Django</span>
+    <span class="tag">Go</span>
+    <span class="tag">Node.js</span>
+    <span class="tag">Docker</span>
+    <span class="tag">Next.js</span>
+    <span class="tag">React</span>
+    <span class="tag">Tailwind</span>
+    <span class="tag">Supabase</span>
+    <span class="tag">Raspberry Pi</span>
+    <span class="tag">n8n</span>
+    <span class="tag">Arduino</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="num"><img src="https://img.shields.io/github/stars/MiguelFAraujo?style=flat-square&label=%E2%98%85&color=58a6ff" alt="stars"/></div>
+      <div class="label">GitHub Stars</div>
+    </div>
+    <div class="stat-card">
+      <div class="num"><img src="https://img.shields.io/github/followers/MiguelFAraujo?style=flat-square&label=%40&color=8b5cf6" alt="followers"/></div>
+      <div class="label">Seguidores</div>
+    </div>
+    <div class="stat-card">
+      <div class="num"><img src="https://img.shields.io/github/watchers/MiguelFAraujo/MiguelFAraujo?style=flat-square&label=%E2%97%86&color=f472b6" alt="watchers"/></div>
+      <div class="label">Repositórios</div>
+    </div>
+    <div class="stat-card">
+      <div class="num"><img src="https://komarev.com/ghpvc/?username=MiguelFAraujo&style=flat-square&color=58a6ff" alt="views"/></div>
+      <div class="label">Profile Views</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span>🔗</span> Projetos</h2>
+    <div class="links">
+      <a href="https://terra-a-vista.vercel.app" target="_blank" class="link-card">
+        <span class="lc-icon">🏠</span>
+        <span class="lc-info"><span class="lc-title">Terra à Vista</span><span class="lc-desc">Imobiliária — Next.js + Supabase + Vercel</span></span>
+        <span class="lc-arrow">→</span>
+      </a>
+      <a href="https://github.com/MiguelFAraujo" target="_blank" class="link-card">
+        <span class="lc-icon">📦</span>
+        <span class="lc-info"><span class="lc-title">GitHub</span><span class="lc-desc">Código aberto e projetos</span></span>
+        <span class="lc-arrow">→</span>
+      </a>
+      <a href="https://linkedin.com/in/MiguelFAraujo" target="_blank" class="link-card">
+        <span class="lc-icon">💼</span>
+        <span class="lc-info"><span class="lc-title">LinkedIn</span><span class="lc-desc">Perfil profissional</span></span>
+        <span class="lc-arrow">→</span>
+      </a>
+      <a href="https://github.com/MiguelFAraujo/gobot" target="_blank" class="link-card">
+        <span class="lc-icon">🤖</span>
+        <span class="lc-info"><span class="lc-title">GoBot</span><span class="lc-desc">Telegram Bot — Go, OCR, 35+ comandos</span></span>
+        <span class="lc-arrow">→</span>
+      </a>
+      <a href="https://github.com/MiguelFAraujo/arduino-na-veia" target="_blank" class="link-card">
+        <span class="lc-icon">🔧</span>
+        <span class="lc-info"><span class="lc-title">Arduino na Veia</span><span class="lc-desc">Maior referência maker brasileira</span></span>
+        <span class="lc-arrow">→</span>
+      </a>
+      <a href="https://github.com/MiguelFAraujo/AMAJGI" target="_blank" class="link-card">
+        <span class="lc-icon">🏘️</span>
+        <span class="lc-info"><span class="lc-title">AMAJGI</span><span class="lc-desc">Portal associação de moradores</span></span>
+        <span class="lc-arrow">→</span>
+      </a>
+      <a href="https://github.com/MiguelFAraujo/GreenOpsMonitor" target="_blank" class="link-card">
+        <span class="lc-icon">📊</span>
+        <span class="lc-info"><span class="lc-title">GreenOps Monitor</span><span class="lc-desc">Monitoramento hardware com MCP + IA</span></span>
+        <span class="lc-arrow">→</span>
+      </a>
+      <a href="https://github.com/MiguelFAraujo/RoboTutor" target="_blank" class="link-card">
+        <span class="lc-icon">🤖</span>
+        <span class="lc-info"><span class="lc-title">RoboTutor</span><span class="lc-desc">Robô educacional open-source (Arduino)</span></span>
+        <span class="lc-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span>⚙️</span> Stack</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🐍</div><div class="value">Python</div><div class="label">Django, Flask, IA</div></div>
+      <div class="card"><div class="icon">🔵</div><div class="value">Go</div><div class="label">GoBot, APIs, CLI</div></div>
+      <div class="card"><div class="icon">🟢</div><div class="value">Node.js</div><div class="label">Next.js, React, TS</div></div>
+      <div class="card"><div class="icon">🐳</div><div class="value">Docker</div><div class="label">6 containers em produção</div></div>
+      <div class="card"><div class="icon">🍓</div><div class="value">Raspberry Pi 4</div><div class="label">Orquestrador 24/7</div></div>
+      <div class="card"><div class="icon">🍊</div><div class="value">OrangePi Zero 2W</div><div class="label">IA local + NFS + n8n</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span>🤖</span> Agentes Autônomos</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🧠</div><div class="value">OpenCode</div><div class="label">LLM Principal — desenvolvimento full-stack</div></div>
+      <div class="card"><div class="icon">🤖</div><div class="value">GoBot</div><div class="label">Telegram — monitoramento + 35 comandos</div></div>
+      <div class="card"><div class="icon">🔧</div><div class="value">Hermes</div><div class="label">Técnico Autônomo — diagnóstico + auto-repair</div></div>
+      <div class="card"><div class="icon">🔄</div><div class="value">n8n</div><div class="label">Automação de workflows</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span>📜</span> Linha do Tempo</h2>
+    <div class="timeline">
+      <div class="timeline-item"><span class="date">Jun 2026</span><br><span class="desc">Site Terra à Vista online (Next.js + Supabase + Vercel)</span></div>
+      <div class="timeline-item"><span class="date">Jun 2026</span><br><span class="desc">OmniRoute AI Gateway com fallback entre 9 provedores</span></div>
+      <div class="timeline-item"><span class="date">Jun 2026</span><br><span class="desc">Hermes Autônomo: webhook + router + auto-repair via IA</span></div>
+      <div class="timeline-item"><span class="date">Mai 2026</span><br><span class="desc">GoBot v4.2: 35+ comandos, OCR, dashboard, scheduler</span></div>
+      <div class="timeline-item"><span class="date">Mai 2026</span><br><span class="desc">Migração SD → Pendrive 256GB + NFS OrangePi</span></div>
+      <div class="timeline-item"><span class="date">Abr 2026</span><br><span class="desc">Início do laboratório autônomo com Raspberry Pi + OrangePi</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span>📊</span> GitHub</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:16px">
+      <img src="https://github-readme-stats.vercel.app/api?username=MiguelFAraujo&show_icons=true&count_private=true&include_all_commits=true&theme=radical&hide_border=true&bg_color=0d1117&icon_color=58a6ff&text_color=c9d1d9&title_color=58a6ff" style="max-width:100%;height:auto"/>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MiguelFAraujo&layout=compact&langs_count=8&theme=radical&hide_border=true&bg_color=0d1117&text_color=c9d1d9&title_color=58a6ff" style="max-width:100%;height:auto"/>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Feito com ❤️ por <a href="https://github.com/MiguelFAraujo">Miguel Araujo</a> — Raspberry Pi 4 + OrangePi Zero 2W</p>
+  <p style="margin-top:4px">Sistema autônomo • IA Generativa • Infraestrutura como código</p>
+  <p style="margin-top:8px"><a href="https://github.com/MiguelFAraujo/portfolio">Ver código fonte desta página →</a></p>
+</div>
+</body>
+</html>
